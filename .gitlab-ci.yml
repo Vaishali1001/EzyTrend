@@ -6,25 +6,25 @@ stages:
 
 install:
   stage: install
-  image: node:16
+  image: node:18
   script:
     - npm install
 
 test:
   stage: test
-  image: node:16
+  image: node:18
   script:
     - npm test
 
 build:
   stage: build
-  image: node:16
+  image: node:18
   script:
     - npm run build
 
 deploy:
   stage: deploy
-  image: node:16
+  image: node:18
   script:
     - ./deploy.sh
   only:
